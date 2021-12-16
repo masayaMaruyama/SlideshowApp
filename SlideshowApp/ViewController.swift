@@ -12,6 +12,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var photo1: UIImageView!
     var photoNumber = 0
     
+    var timer: Timer!
+    var timer_sec: Float = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -50,17 +52,14 @@ class ViewController: UIViewController {
         
     }
         
-        
-        
-    @IBAction func playButton(_ sender: UIButton) {
+    @IBAction func playButton(_ sender: Any) {
+        playButton.setTitle("停止", for: .normal)
+    }
 
-
+func tapAction(_ sender: Any) {
     }
     
+func unwind(_ segue:UIStoryboardSegue) {
+    }
     
-
-    
-
 }
-
-
