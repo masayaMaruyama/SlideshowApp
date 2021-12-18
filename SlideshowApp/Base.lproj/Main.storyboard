@@ -34,25 +34,26 @@
                                     <action selector="backaButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sTH-nq-GAq"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xxd-g0-RID">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="400"/>
-                                <gestureRecognizers/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="400" id="UCJ-Vg-Wem"/>
-                                </constraints>
-                                <connections>
-                                    <outletCollection property="gestureRecognizers" destination="gjT-qu-z1W" appends="YES" id="GwM-p2-GtS"/>
-                                </connections>
-                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sIe-5z-BlW">
-                                <rect key="frame" x="277" y="496" width="48" height="22"/>
-                                <state key="normal" title="play" image="play.fill" catalog="system">
+                                <rect key="frame" x="292" y="484" width="33" height="34"/>
+                                <state key="normal" title="play">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
                                     <action selector="playButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kGq-pS-PbO"/>
                                 </connections>
                             </button>
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xxd-g0-RID">
+                                <rect key="frame" x="87.5" y="0.0" width="200" height="200"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="5ZT-dK-uif"/>
+                                    <constraint firstAttribute="height" constant="200" id="uvX-RM-APm"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="gjT-qu-z1W" appends="YES" id="GwM-p2-GtS"/>
+                                </connections>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -61,8 +62,7 @@
                             <constraint firstItem="NTf-v8-9VQ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="1Ls-a8-bSa"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="sIe-5z-BlW" secondAttribute="trailing" constant="50" id="76p-eh-6yC"/>
                             <constraint firstItem="sIe-5z-BlW" firstAttribute="bottom" secondItem="AIw-yq-oOA" secondAttribute="bottom" id="9X4-MB-Yj9"/>
-                            <constraint firstItem="xxd-g0-RID" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="HM0-c0-Fjb"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="xxd-g0-RID" secondAttribute="trailing" id="d6a-Ep-fwq"/>
+                            <constraint firstItem="xxd-g0-RID" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Q4j-r5-cNO"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="AIw-yq-oOA" secondAttribute="bottom" constant="100" id="dBn-x3-Rr0"/>
                             <constraint firstItem="xxd-g0-RID" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="jGa-Kn-PUS"/>
                             <constraint firstItem="AIw-yq-oOA" firstAttribute="bottom" secondItem="NTf-v8-9VQ" secondAttribute="bottom" id="kVj-5o-wVX"/>
@@ -75,7 +75,11 @@
                     <toolbarItems/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="backButton" destination="NTf-v8-9VQ" id="vNc-R9-vpl"/>
+                        <outlet property="forwardButton" destination="AIw-yq-oOA" id="T8c-mT-fz4"/>
                         <outlet property="photo1" destination="xxd-g0-RID" id="XpD-qg-41s"/>
+                        <outlet property="playButton" destination="sIe-5z-BlW" id="lBb-0N-q6m"/>
+                        <outlet property="tapGes" destination="gjT-qu-z1W" id="GvN-zl-p0i"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -103,24 +107,33 @@
                                 </state>
                                 <connections>
                                     <action selector="unwind:" destination="fbM-6C-fEB" eventType="touchUpInside" id="lvK-K5-8NO"/>
-                                    <segue destination="fbM-6C-fEB" kind="unwind" unwindAction="unwind:" id="7qK-zu-JyB"/>
+                                    <segue destination="fbM-6C-fEB" kind="unwind" unwindAction="unwind:" id="iaB-f6-qaT"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zlE-zt-Den">
-                                <rect key="frame" x="0.0" y="192" width="375" height="128"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="zlE-zt-Den">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="400"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="400" id="pib-Sp-XUC"/>
+                                </constraints>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="3X7-gS-40a"/>
                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="zlE-zt-Den" firstAttribute="top" secondItem="3X7-gS-40a" secondAttribute="top" id="3M0-BB-8Qr"/>
                             <constraint firstItem="zlE-zt-Den" firstAttribute="leading" secondItem="3X7-gS-40a" secondAttribute="leading" id="3SU-t2-x8D"/>
                             <constraint firstItem="3X7-gS-40a" firstAttribute="bottom" secondItem="E1u-4u-OqL" secondAttribute="bottom" constant="100" id="NIE-Tu-ktt"/>
                             <constraint firstItem="3X7-gS-40a" firstAttribute="trailing" secondItem="zlE-zt-Den" secondAttribute="trailing" id="Pdm-U8-b6i"/>
+                            <constraint firstItem="zlE-zt-Den" firstAttribute="leading" secondItem="3X7-gS-40a" secondAttribute="leading" id="VQs-oi-xqW"/>
+                            <constraint firstItem="zlE-zt-Den" firstAttribute="trailing" secondItem="3X7-gS-40a" secondAttribute="trailing" id="coU-0A-cG6"/>
                             <constraint firstItem="E1u-4u-OqL" firstAttribute="centerX" secondItem="LHA-gM-zll" secondAttribute="centerX" id="ihZ-XC-I7t"/>
                             <constraint firstItem="zlE-zt-Den" firstAttribute="top" secondItem="3X7-gS-40a" secondAttribute="top" id="vN0-3H-LWN"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="fi9-wd-yYn"/>
+                    <connections>
+                        <outlet property="photo2" destination="zlE-zt-Den" id="3H5-vb-4JK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IJx-oQ-zj4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="fbM-6C-fEB" userLabel="Exit" sceneMemberID="exit"/>
@@ -132,7 +145,6 @@
         <image name="arrowshape.turn.up.backward.fill" catalog="system" width="128" height="106"/>
         <image name="backward.fill" catalog="system" width="128" height="79"/>
         <image name="forward.fill" catalog="system" width="128" height="79"/>
-        <image name="play.fill" catalog="system" width="116" height="128"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
