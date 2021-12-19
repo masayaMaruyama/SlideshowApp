@@ -36,8 +36,8 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
 
-
     }
+
     
     @IBAction func backaButton(_ sender: Any) {
         
@@ -73,7 +73,7 @@ class ViewController: UIViewController {
         // 再生中か停止しているかを判定
                if (timer == nil) {
                    timer = Timer.scheduledTimer(timeInterval: 2.0, target: self, selector: #selector(changeImage), userInfo: nil, repeats: true)
-                   playButton.setTitle("停止", for: .normal)
+                   playButton.setTitle("stop", for: .normal)
                 backButton.isEnabled = false
                 backButton.isHidden = true
                 forwardButton.isEnabled = false
@@ -83,7 +83,7 @@ class ViewController: UIViewController {
                } else {
                    timer.invalidate()
                    timer = nil
-                   playButton.setTitle("再生", for: .normal)
+                   playButton.setTitle("play", for: .normal)
                 backButton.isEnabled = true
                 backButton.isHidden = false
                 forwardButton.isEnabled = true
@@ -111,5 +111,5 @@ class ViewController: UIViewController {
     
 @IBAction func unwind(_ segue:UIStoryboardSegue) {
     }
-    
+
 }

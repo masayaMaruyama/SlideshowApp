@@ -17,8 +17,8 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AIw-yq-oOA">
-                                <rect key="frame" x="144" y="496" width="87" height="22"/>
-                                <state key="normal" title="forward" image="forward.fill" catalog="system">
+                                <rect key="frame" x="156.5" y="484" width="62" height="34"/>
+                                <state key="normal" title="forward">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
@@ -26,8 +26,8 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NTf-v8-9VQ">
-                                <rect key="frame" x="50" y="496" width="64" height="22"/>
-                                <state key="normal" title="back" image="backward.fill" catalog="system">
+                                <rect key="frame" x="50" y="484" width="39" height="34"/>
+                                <state key="normal" title="back">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
@@ -44,7 +44,7 @@
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xxd-g0-RID">
-                                <rect key="frame" x="87.5" y="0.0" width="200" height="200"/>
+                                <rect key="frame" x="87.5" y="233.5" width="200" height="200"/>
                                 <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="200" id="5ZT-dK-uif"/>
@@ -62,9 +62,9 @@
                             <constraint firstItem="NTf-v8-9VQ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="1Ls-a8-bSa"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="sIe-5z-BlW" secondAttribute="trailing" constant="50" id="76p-eh-6yC"/>
                             <constraint firstItem="sIe-5z-BlW" firstAttribute="bottom" secondItem="AIw-yq-oOA" secondAttribute="bottom" id="9X4-MB-Yj9"/>
-                            <constraint firstItem="xxd-g0-RID" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Q4j-r5-cNO"/>
+                            <constraint firstItem="xxd-g0-RID" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Sm6-zt-RLY"/>
+                            <constraint firstItem="xxd-g0-RID" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="cLs-0A-WR3"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="AIw-yq-oOA" secondAttribute="bottom" constant="100" id="dBn-x3-Rr0"/>
-                            <constraint firstItem="xxd-g0-RID" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="jGa-Kn-PUS"/>
                             <constraint firstItem="AIw-yq-oOA" firstAttribute="bottom" secondItem="NTf-v8-9VQ" secondAttribute="bottom" id="kVj-5o-wVX"/>
                             <constraint firstItem="AIw-yq-oOA" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="n0P-Mm-8cg"/>
                         </constraints>
@@ -143,8 +143,6 @@
     </scenes>
     <resources>
         <image name="arrowshape.turn.up.backward.fill" catalog="system" width="128" height="106"/>
-        <image name="backward.fill" catalog="system" width="128" height="79"/>
-        <image name="forward.fill" catalog="system" width="128" height="79"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
