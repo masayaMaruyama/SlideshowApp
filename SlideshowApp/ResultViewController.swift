@@ -8,17 +8,19 @@
 import UIKit
 
 class ResultViewController: UIViewController {
-
+    //UIImage Outlet 接続
     @IBOutlet weak var photo2: UIImageView!
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        //UIImage表示
+        photo2.image = UIImage (named: "ra-0")
         
-        
-        photo2.image = UIImage (named: "ra-11")
     }
+    
     
 
     /*

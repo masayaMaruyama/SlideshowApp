@@ -14,6 +14,9 @@
 		6F984CD127676D1600121094 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6F984CCF27676D1600121094 /* Main.storyboard */; };
 		6F984CD327676D1700121094 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6F984CD227676D1700121094 /* Assets.xcassets */; };
 		6F984CD627676D1700121094 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6F984CD427676D1700121094 /* LaunchScreen.storyboard */; };
+		6FA38CF12770A2DF00A13669 /* gyo-2.png in Resources */ = {isa = PBXBuildFile; fileRef = 6FA38CEE2770A2DF00A13669 /* gyo-2.png */; };
+		6FA38CF22770A2DF00A13669 /* ra-0.png in Resources */ = {isa = PBXBuildFile; fileRef = 6FA38CEF2770A2DF00A13669 /* ra-0.png */; };
+		6FA38CF32770A2DF00A13669 /* cha-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 6FA38CF02770A2DF00A13669 /* cha-1.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +29,9 @@
 		6F984CD227676D1700121094 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6F984CD527676D1700121094 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6F984CD727676D1700121094 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6FA38CEE2770A2DF00A13669 /* gyo-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "gyo-2.png"; sourceTree = "<group>"; };
+		6FA38CEF2770A2DF00A13669 /* ra-0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ra-0.png"; sourceTree = "<group>"; };
+		6FA38CF02770A2DF00A13669 /* cha-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cha-1.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +71,9 @@
 				6F984CCF27676D1600121094 /* Main.storyboard */,
 				6F984CD227676D1700121094 /* Assets.xcassets */,
 				6F984CD427676D1700121094 /* LaunchScreen.storyboard */,
+				6FA38CEF2770A2DF00A13669 /* ra-0.png */,
+				6FA38CF02770A2DF00A13669 /* cha-1.png */,
+				6FA38CEE2770A2DF00A13669 /* gyo-2.png */,
 				6F984CD727676D1700121094 /* Info.plist */,
 			);
 			path = SlideshowApp;
@@ -127,8 +136,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6FA38CF32770A2DF00A13669 /* cha-1.png in Resources */,
 				6F984CD627676D1700121094 /* LaunchScreen.storyboard in Resources */,
+				6FA38CF22770A2DF00A13669 /* ra-0.png in Resources */,
 				6F984CD327676D1700121094 /* Assets.xcassets in Resources */,
+				6FA38CF12770A2DF00A13669 /* gyo-2.png in Resources */,
 				6F984CD127676D1600121094 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
