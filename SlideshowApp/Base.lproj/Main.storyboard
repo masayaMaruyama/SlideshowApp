@@ -50,10 +50,18 @@
                                     <constraint firstAttribute="width" constant="200" id="5ZT-dK-uif"/>
                                     <constraint firstAttribute="height" constant="200" id="uvX-RM-APm"/>
                                 </constraints>
-                                <connections>
-                                    <outletCollection property="gestureRecognizers" destination="gjT-qu-z1W" appends="YES" id="GwM-p2-GtS"/>
-                                </connections>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Poe-Kl-hbD" userLabel="toResultViewController">
+                                <rect key="frame" x="87.5" y="233.5" width="200" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="6B1-Xs-wOI"/>
+                                    <constraint firstAttribute="width" constant="200" id="T3i-Ve-7Z2"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="toResultViewController:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bgP-qs-ymL"/>
+                                    <segue destination="iuR-7q-8VV" kind="show" id="t7O-o6-2dA"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -62,15 +70,14 @@
                             <constraint firstItem="NTf-v8-9VQ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="1Ls-a8-bSa"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="sIe-5z-BlW" secondAttribute="trailing" constant="50" id="76p-eh-6yC"/>
                             <constraint firstItem="sIe-5z-BlW" firstAttribute="bottom" secondItem="AIw-yq-oOA" secondAttribute="bottom" id="9X4-MB-Yj9"/>
+                            <constraint firstItem="Poe-Kl-hbD" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="MRv-Av-iO7"/>
                             <constraint firstItem="xxd-g0-RID" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Sm6-zt-RLY"/>
+                            <constraint firstItem="Poe-Kl-hbD" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="XTa-vW-itF"/>
                             <constraint firstItem="xxd-g0-RID" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="cLs-0A-WR3"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="AIw-yq-oOA" secondAttribute="bottom" constant="100" id="dBn-x3-Rr0"/>
                             <constraint firstItem="AIw-yq-oOA" firstAttribute="bottom" secondItem="NTf-v8-9VQ" secondAttribute="bottom" id="kVj-5o-wVX"/>
                             <constraint firstItem="AIw-yq-oOA" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="n0P-Mm-8cg"/>
                         </constraints>
-                        <connections>
-                            <outletCollection property="gestureRecognizers" destination="gjT-qu-z1W" appends="YES" id="grY-15-5Gz"/>
-                        </connections>
                     </view>
                     <toolbarItems/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
@@ -79,16 +86,9 @@
                         <outlet property="forwardButton" destination="AIw-yq-oOA" id="T8c-mT-fz4"/>
                         <outlet property="photo1" destination="xxd-g0-RID" id="XpD-qg-41s"/>
                         <outlet property="playButton" destination="sIe-5z-BlW" id="lBb-0N-q6m"/>
-                        <outlet property="tapGes" destination="gjT-qu-z1W" id="GvN-zl-p0i"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="gjT-qu-z1W">
-                    <connections>
-                        <action selector="tapAction:" destination="BYZ-38-t0r" id="DQx-yk-JzY"/>
-                        <segue destination="iuR-7q-8VV" kind="show" id="ZIX-WL-2lE"/>
-                    </connections>
-                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="139" y="94"/>
         </scene>

@@ -20,11 +20,6 @@ class ViewController: UIViewController {
     @IBOutlet weak var backButton: UIButton!
     @IBOutlet weak var forwardButton: UIButton!
     
-    //画像をタップすると画面を遷移
-    @IBOutlet var tapGes: UITapGestureRecognizer!
-    func tapAction(_ sender: Any) {
-    }
-    
     var imageArray:[UIImage] = [
         UIImage(named: "ra-0")!,
         UIImage(named: "cha-1")!,
@@ -36,9 +31,10 @@ class ViewController: UIViewController {
         photo1.image = imageArray[0]
     }
     
+    //画像そのものをResultへ渡す
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let resultViewController:ResultViewController = segue.destination as! ResultViewController
-        resultViewController.x = photoNumber
+        resultViewController.image = photo1.image
     }
     
     @IBAction func forwardButton(_ sender: UIButton) {
@@ -61,18 +57,18 @@ class ViewController: UIViewController {
     //playButton
     @IBAction func playButton(_ sender: Any) {
         // 再生中か停止しているかを判定
-        if (timer == nil) {
+        if (timer == nil) {//stopの場合→playへ
             timer = Timer.scheduledTimer(timeInterval: 2.0, target: self, selector: #selector(changeImage), userInfo: nil, repeats: true)
             playButton.setTitle("stop", for: .normal)
             //button無効
             (backButton.isEnabled,backButton.isHidden) = (false,true)
             (forwardButton.isEnabled,forwardButton.isHidden) = (false,true)
-        } else {
+        } else {//playの場合→stopへ
             timer.invalidate()
             timer = nil
             playButton.setTitle("play", for: .normal)
             //button有効
-            ( backButton.isEnabled,forwardButton.isEnabled,tapGes.isEnabled ) = ( true , true , true )
+            ( backButton.isEnabled,forwardButton.isEnabled ) = ( true , true )
             ( backButton.isHidden,forwardButton.isHidden ) = ( false , false )
         }
     }
@@ -87,8 +83,18 @@ class ViewController: UIViewController {
         photo1.image = imageArray[photoNumber]
     }
     
+    //画像をタップすると画面を遷移
+    @IBAction func toResultViewController(_ sender: Any) {
+        if (timer != nil){
+            timer.invalidate()
+            timer = nil
+            playButton.setTitle("play", for: .normal)
+            //button有効
+            ( backButton.isEnabled,forwardButton.isEnabled ) = ( true , true )
+            ( backButton.isHidden,forwardButton.isHidden ) = ( false , false )
+        }
+    }
     //帰りのsegue
     @IBAction func unwind(_ segue:UIStoryboardSegue) {
     }
-    
 }

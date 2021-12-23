@@ -11,25 +11,12 @@ class ResultViewController: UIViewController {
     //UIImage Outlet 接続
     @IBOutlet weak var photo2: UIImageView!
     
-    var x:Int = 0
+    var image: UIImage! //画像そのもの　の受け取り
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        //UIImage表示
-        let imageArray:[UIImage] = [
-            UIImage(named: "ra-0")!,
-            UIImage(named: "cha-1")!,
-            UIImage(named: "gyo-2")!
-        ]
-        
-        photo2.image = imageArray[x]
-        
-        
+        photo2.image = image
     }
-    
-    
-    
     /*
      // MARK: - Navigation
      
