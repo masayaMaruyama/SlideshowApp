@@ -35,6 +35,17 @@ class ViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let resultViewController:ResultViewController = segue.destination as! ResultViewController
         resultViewController.image = photo1.image
+        
+        //TimerStop
+            if (timer != nil){
+                timer.invalidate()
+                timer = nil
+                playButton.setTitle("play", for: .normal)
+                //button有効
+                ( backButton.isEnabled,forwardButton.isEnabled ) = ( true , true )
+                ( backButton.isHidden,forwardButton.isHidden ) = ( false , false )
+            }
+        
     }
     
     @IBAction func forwardButton(_ sender: UIButton) {
@@ -85,14 +96,7 @@ class ViewController: UIViewController {
     
     //画像をタップすると画面を遷移
     @IBAction func toResultViewController(_ sender: Any) {
-        if (timer != nil){
-            timer.invalidate()
-            timer = nil
-            playButton.setTitle("play", for: .normal)
-            //button有効
-            ( backButton.isEnabled,forwardButton.isEnabled ) = ( true , true )
-            ( backButton.isHidden,forwardButton.isHidden ) = ( false , false )
-        }
+
     }
     //帰りのsegue
     @IBAction func unwind(_ segue:UIStoryboardSegue) {
